@@ -1,0 +1,12 @@
+<p>reactiveform works!</p>
+
+
+<form [formGroup]="login" (submit)="displaylg()">
+    <div class="row">
+        <div class="col">
+            <td>user name: <input type="text" name="usernm" formControlName="usernm"></td>
+            <td>password: <input type="password" name="pwd" formControlName="pwd"></td>
+            <td> <button type="submit">Login</button> </td>
+        </div>
+    </div>
+</form>

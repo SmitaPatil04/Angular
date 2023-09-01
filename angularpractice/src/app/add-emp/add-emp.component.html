@@ -1,0 +1,15 @@
+<p>add-emp works!</p>
+
+<form #data="ngForm" (submit)="addEmployee(data)" >
+
+    Enter First Name: <input type="text" name="firstName" [(ngModel)]="firstName"><br>
+    Enter Last Name: <input type="text" name="lastName" [(ngModel)]="lastName"><br>
+    Salary: <input type="number" name="salary" [(ngModel)]="salary"><br>
+
+    <button type="submit">Add Employee</button>
+
+
+</form>
+
+
+

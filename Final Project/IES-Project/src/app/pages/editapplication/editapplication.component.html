@@ -1,0 +1,55 @@
+
+    
+<div id="container1" class="bg-image" style=" background-image: url('../../../assets/images/registr.jpg');
+background-repeat: no-repeat;background-size: cover;background-position: center center; background-attachment: fixed;background-color: rgba(255,255,255,0.13);
+ ">
+<div id="container2" class="p-4" >
+ <div  class="main d-flex justify-content-center">
+
+    <div class="content justify-text-left ">
+        <div class="text-center text"> Applicant Registration Form </div> <br>
+        <form [formGroup]="editapplicantform" (submit)="editapplicant()" class="text-center m">
+          
+         <input type="text" name="fname" formControlName="fname" placeholder="Enter First name">
+         <!-- <label for="">First Name </label> -->
+      <p><small  *ngIf="!editapplicantform.controls['fname'].valid && 
+        editapplicantform.controls['fname']?.touched " style="color: red;">invalid Name </small></p>
+       
+       <input type="text" name="lname" formControlName="lname" placeholder="Last  Name">
+       <!-- <label for=""> Last Name </label> -->
+        <p><small  *ngIf="!editapplicantform.controls['lname'].valid && 
+          editapplicantform.controls['lname']?.touched " style="color: red;">invalid Last  Name </small></p>
+           
+         <input type="email" name="email" formControlName="email" placeholder=" email ">
+          <!-- <label for="">E-mail Address</label> -->
+          <p><small  *ngIf="!editapplicantform.controls['email'].valid && 
+            editapplicantform.controls['email']?.touched " style="color: red;">invalid email</small></p>
+            
+           <input type="password" name="password" formControlName="password" placeholder=" Password ">
+          <p><small  *ngIf="!editapplicantform.controls['password'].valid && 
+            editapplicantform.controls['password']?.touched " style="color: red;">Invalid Password</small></p>
+            
+             <input type="number" name="" formControlName="adharno" placeholder=" AAdhar Number ">
+            <p><small  *ngIf="!editapplicantform.controls['adharno'].valid && 
+              editapplicantform.controls['adharno']?.touched " style="color: red;">aadhar number</small></p>
+          
+              <input type="number" name="" formControlName="contact" placeholder=" Contact Number ">
+              <p><small  *ngIf="!editapplicantform.controls['contact'].valid && 
+                editapplicantform.controls['contact']?.touched " style="color: red;">Contact number</small></p>
+
+            
+
+           
+           
+        
+        <div [innerHTML]="name" style="color: rgb(12, 78, 12);"></div>
+       
+        <button type="submit" class="btn btn-primary " [disabled]="editapplicantform.invalid">Add </button>
+        <button type="reset" class="btn btn-primary " (click)="resetform()">Reset</button>   
+    </form>
+ 
+    </div>
+</div>
+</div>
+</div>
+

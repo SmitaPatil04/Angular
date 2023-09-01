@@ -1,0 +1,43 @@
+
+    
+<div id="container1" class="bg-image" style=" background-image: url('../../../assets/images/income2.jpg');
+background-repeat: no-repeat;background-size: cover;background-position: center center; background-attachment: fixed;">
+    <div id="container2" >
+      <div class=" h-100">
+        <div class="row d-flex align-items-center justify-content-center h-100">
+         
+          <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+            <form [formGroup]="incomeDetailsform" (submit)="incomeD(incomeDetailsform.value)">
+                <h2 class="fw-bold mb-3">Income Details</h2>
+              
+              <div class="form-outline mb-4">
+                <input type="number" id="form1Example13" formControlName="caseId" class="form-control form-control-lg" />
+                <label class="form-label" for="form1Example13">Case ID</label>
+              </div>
+              <div class="form-outline mb-4">
+                <input type="name" id="form1Example13" formControlName="indname" class="form-control form-control-lg" />
+                <label class="form-label" for="form1Example13">Indivital Name</label>
+              </div>
+              
+              <div class="form-outline mb-4">
+              <h6 class="mb-0 me-4"> Is working Employee: </h6>
+              <input type="radio" value="" name="isworking" formControlName="isworking">
+            <input type="radio" name="isworking" value="" formControlName="isworking">
+          </div>
+              
+
+                  
+              <div class="form-outline mb-4">
+                <input type="number" id="form1Example13" formControlName="otherinc" class="form-control form-control-lg" />
+                <label class="form-label" for="form1Example13">Other Income</label>
+              </div>
+    
+                          
+              <button class="btn btn-primary btn-lg btn-block" type="submit">Submit</button>
+                
+    
+            </form>
+          </div>
+        </div>
+      </div>
+</div>

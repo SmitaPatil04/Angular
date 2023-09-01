@@ -1,0 +1,32 @@
+<div id="container1" class="bg-image" style=" background-image: url('../../../assets/images/plain2.jpg');
+background-repeat: no-repeat;background-size: cover;background-position: center center; background-attachment: fixed;background-color: rgba(255,255,255,0.13);
+ ">
+<div id="container2" class="p-4" >
+ <div  class="main d-flex justify-content-center">
+
+    <div class="content justify-text-left ">
+        <div class="text-center display-6 ">Forget Password</div> <br>
+                
+                    
+                    <form [formGroup]="forgotpwdform" (submit)="forgotpwd()">
+                  <!-- Email input -->
+                  <div class="form-outline mb-4">
+                    
+                    <input type="email"  formControlName="email" class="form-control form-control-lg" placeholder="Enter Email-address" /> <br>
+                    <p><small  *ngIf="!forgotpwdform.controls['email'].valid && 
+                      forgotpwdform.controls['email']?.touched " style="color: red;">invalid email</small></p>
+
+                    <button class="btn btn-lg  m-2 px-3"  type="submit" >New Password</button>   
+                    <button class="btn btn-lg  m-2 px-3"  type="submit" routerLink="/login">Back</button>
+                    
+                  </div> <br>
+                  
+                
+      
+                
+      
+              </form>
+            </div>
+        </div>
+    </div>
+ </div>

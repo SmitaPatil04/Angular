@@ -1,0 +1,83 @@
+
+    
+<div id="container1" class="bg-image" style=" background-image: url('../../../assets/images/pain1.jpg');
+background-repeat: no-repeat;background-size: cover;background-position: center center; background-attachment: fixed;background-color: rgba(255,255,255,0.13);
+ ">
+<div id="container2" class="p-4" >
+ <div  class="main d-flex justify-content-center">
+
+    <div class="content justify-text-left ">
+        <div class="text-center display-6 ">Registration Form </div> <br>
+        <form [formGroup]="userRegistrationform" (submit)="userRegistration();" class="text-center ">
+         
+          <div class="form-outline mb-4 ">
+         <input class="length" type="text" name="fname" formControlName="fname" placeholder="Enter First name"> <br>
+         <!-- <label for="">First Name </label> -->
+      <p><small  *ngIf="!userRegistrationform.controls['fname'].valid && 
+        userRegistrationform.controls['fname']?.touched " style="color: red;">invalid Name </small></p>
+       </div>
+
+       <div class="form-outline mb-4">
+       <input class="length" type="text" name="lname" formControlName="lname" placeholder="Last  Name"> <br>
+       <!-- <label for=""> Last Name </label> -->
+        <p><small  *ngIf="!userRegistrationform.controls['lname'].valid && 
+          userRegistrationform.controls['lname']?.touched " style="color: red;">invalid Last  Name </small></p>
+       </div>
+       <div class="form-outline mb-4"> 
+         <input class="length" type="email" name="email" formControlName="email" placeholder=" email "> <br>
+          <!-- <label for="">E-mail Address</label> -->
+          <p><small  *ngIf="!userRegistrationform.controls['email'].valid && 
+            userRegistrationform.controls['email']?.touched " style="color: red;">invalid email</small></p>
+         </div>
+         <div class="form-outline mb-4">  
+           <input class="length" type="password" name="password" formControlName="password" placeholder=" Password "> <br>
+          <p><small  *ngIf="!userRegistrationform.controls['password'].valid && 
+            userRegistrationform.controls['password']?.touched " style="color: red;">Invalid Password</small></p>
+          </div>
+          <div class="form-outline mb-4">  
+             <input class="length" type="date" name="dob" formControlName="dob" placeholder=" Date of birth "> <br>
+            <p><small  *ngIf="!userRegistrationform.controls['dob'].valid && 
+              userRegistrationform.controls['dob']?.touched " style="color: red;">Invalid Date</small></p>
+          </div>
+
+          <div  class="form-outline mb-4">
+             Gender
+            <input  type="radio" value="male" name="gender" formControlName="gender">Male
+            <input  type="radio" name="gender" value="female" formControlName="gender">Female
+           </div>
+
+           
+            <h4><small  *ngIf="!userRegistrationform.controls['gender'].valid && 
+                userRegistrationform.controls['gender']?.touched " style="color: red;">choose Child gender </small></h4>
+
+                <div class="form-outline mb-4">
+                 <input class="length" type="number" name="contact" formControlName="contact" placeholder="Contact Number"> <br>
+                <p><small  *ngIf="!userRegistrationform.controls['contact'].valid && 
+                  userRegistrationform.controls['contact']?.touched " style="color: red;">invalid Contact Number </small></p>
+                </div>
+
+                <div class="form-outline mb-4">
+            <input class="length" type="number" name="aadhar" formControlName="adharno" placeholder="SSN number"> <br>
+            <p><small  *ngIf="!userRegistrationform.controls['adharno'].valid && 
+              userRegistrationform.controls['adharno']?.touched " style="color: red;">invalid SSN Number </small></p>
+            </div>
+              
+            <div class="form-outline mb-4 ">
+                 <select name="role" id="role"> 
+                  <option value="">Role</option>   
+                <option value="">Admin</option>
+                <option value="">Case Worker</option>
+               </select>
+               </div>
+           
+        
+        <div [innerHTML]="name" style="color: rgb(12, 78, 12);"></div>
+       
+        <button type="submit" class="btn p-2 m-2 " [disabled]="userRegistrationform.invalid">Add </button>
+        <button type="reset" class="btn  p-2 m-2 " (click)="resetform()">Reset</button>   
+    </form>
+ 
+    </div>
+</div>
+</div>
+</div>

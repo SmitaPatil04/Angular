@@ -1,0 +1,60 @@
+
+
+    
+<div id="container1" class="bg-image" style=" background-image: url('../../../assets/images/income2.jpg');
+background-repeat: no-repeat;background-size: cover;background-position: center center; background-attachment: fixed;">
+    <div id="container2" >
+      <div class=" h-100">
+        <div class="row d-flex align-items-center justify-content-center h-100">
+         
+          <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+            <form [formGroup]="eduDetailsform" (submit)="educationalD(eduDetailsform.value)">
+                <h2 class="fw-bold mb-3">Educational Details</h2>
+              
+              <div class="form-outline mb-4">
+                <input type="number" id="form1Example13" formControlName="caseId" class="form-control form-control-lg" />
+                <p><small  *ngIf="!eduDetailsform.controls['caseId'].valid && 
+                  eduDetailsform.controls['caseId']?.touched " style="color: red;">invalid case id </small></p>
+                <label class="form-label" for="form1Example13">Case ID</label>
+              </div>
+              <div class="form-outline mb-4">
+                <input type="name" id="form1Example13" formControlName="indname" class="form-control form-control-lg" />
+                <p><small  *ngIf="!eduDetailsform.controls['indname'].valid && 
+                  eduDetailsform.controls['indame']?.touched " style="color: red;">invalid Name</small></p>
+                <label class="form-label" for="form1Example13">Indivital Name</label>
+              </div>
+              <div class="form-outline mb-4">
+                <input type="text" id="form1Example13" formControlName="hqualification" class="form-control form-control-lg" />
+                <p><small  *ngIf="!eduDetailsform.controls['hqualification'].valid && 
+                  eduDetailsform.controls['hqualification']?.touched " style="color: red;">Highest Qualification</small></p>
+                <label class="form-label" for="form1Example13">Highest Qualification</label>
+              </div>
+              <div class="form-outline mb-4">
+                <input type="number" id="form1Example13" formControlName="compyear" class="form-control form-control-lg" />
+                <p><small  *ngIf="!eduDetailsform.controls['compyear'].valid && 
+                  eduDetailsform.controls['compyear']?.touched " style="color: red;">Completed Year</small></p>
+                <label class="form-label" for="form1Example13">Completed Year</label>
+              </div>
+                                
+              <div class="form-outline mb-4">
+                Grade <select name="grade" formControlName="grade">
+                  <option value="0">A+</option>
+                  <option value="1">A</option>
+                  <option value="2">B+</option>
+                  <option value="3">B</option>
+                  <option value="4">C+</option>
+                  <option value="5">C</option>
+                  <option value="6">D</option>
+
+                </select>
+              </div>
+    
+                          
+              <button class="btn btn-primary btn-lg btn-block" type="submit">Submit</button>
+                
+    
+            </form>
+          </div>
+        </div>
+      </div>
+</div>

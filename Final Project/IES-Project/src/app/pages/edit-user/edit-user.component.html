@@ -1,0 +1,66 @@
+
+
+    
+<div id="container1" class="bg-image" style=" background-image: url('../../../assets/images/registr.jpg');
+background-repeat: no-repeat;background-size: cover;background-position: center center; background-attachment: fixed;background-color: rgba(255,255,255,0.13);
+ ">
+<div id="container2" class="p-4" >
+ <div  class="main d-flex justify-content-center">
+
+    <div class="content justify-text-left ">
+        <div class="text-center text">Registration Form </div> <br>
+        <form [formGroup]="edituserform" (submit)="edituser();" class="text-center m">
+          
+         <input type="text" name="fname" formControlName="fname" placeholder="Enter First name">
+         
+      <p><small  *ngIf="!edituserform.controls['fname'].valid && 
+        edituserform.controls['fname']?.touched " style="color: red;">invalid Name </small></p>
+       
+       <input type="text" name="lname" formControlName="lname" placeholder="Last  Name">
+       
+        <p><small  *ngIf="!edituserform.controls['lname'].valid && 
+          edituserform.controls['lname']?.touched " style="color: red;">invalid Last  Name </small></p>
+           
+         <input type="email" name="email" formControlName="email" placeholder=" email ">
+          
+          <p><small  *ngIf="!edituserform.controls['email'].valid && 
+            edituserform.controls['email']?.touched " style="color: red;">invalid email</small></p>
+            
+           <input type="password" name="password" formControlName="password" placeholder=" Password ">
+          <p><small  *ngIf="!edituserform.controls['password'].valid && 
+            edituserform.controls['password']?.touched " style="color: red;">Invalid Password</small></p>
+            
+             <input type="date" name="dob" formControlName="dob" placeholder=" Date of birth ">
+            <p><small  *ngIf="!edituserform.controls['dob'].valid && 
+              edituserform.controls['dob']?.touched " style="color: red;">Invalid Date</small></p>
+          
+
+             Gender
+            <input type="radio" value="male" name="gender" formControlName="gender">Male
+            <input type="radio" name="gender" value="female" formControlName="gender">Female
+            
+
+            <h4><small  *ngIf="!edituserform.controls['gender'].valid && 
+                edituserform.controls['gender']?.touched " style="color: red;">choose Child gender </small></h4>
+
+                 <input type="number" name="contact" formControlName="contact" placeholder="Contact Number">
+                <p><small  *ngIf="!edituserform.controls['contact'].valid && 
+                  edituserform.controls['contact']?.touched " style="color: red;">invalid Contact Number </small></p>
+
+            <input type="number" name="aadhar" formControlName="adharno" placeholder="SS Number">
+            <p><small  *ngIf="!edituserform.controls['adharno'].valid && 
+              edituserform.controls['adharno']?.touched " style="color: red;">invalid SSN Number </small></p>
+            
+          
+           
+        
+        <div [innerHTML]="name" style="color: rgb(12, 78, 12);"></div>
+       
+        <button type="submit" class="btn btn-primary " [disabled]="edituserform.invalid">Add </button>
+        <button type="reset" class="btn btn-primary " (click)="resetform()">Reset</button>   
+    </form>
+ 
+    </div>
+</div>
+</div>
+</div>

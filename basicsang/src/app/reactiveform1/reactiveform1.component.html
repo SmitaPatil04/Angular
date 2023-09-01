@@ -1,0 +1,12 @@
+<p>reactiveform1 works!</p>
+
+
+<form [formGroup]="login" (submit)="addform()">
+
+    User Name: <input type="text" name="username" formControlName="username"><br>
+    Password: <input type="password" name="password" formControlName="password"><br>
+
+    <button type="submit" [disabled]="">Submit</button>|<button type="reset" (click)="resetform()">Reset</button>
+    |<button type="button" (click)="defaultform()">Default</button>
+
+</form>

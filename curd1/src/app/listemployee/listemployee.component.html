@@ -1,0 +1,21 @@
+<p>listemployee works!</p>
+
+
+    <button> <a [routerLink]="['create']"> Add Employee</a></button>
+<table>
+    <tr>
+        <th>Firts Name</th>
+        <th>Last Name</th>
+        <th>Salary</th>
+        <th>Actions</th>
+    </tr>
+    <tr *ngFor="let emp of employees">
+        <td>{{emp.firstName}}</td>
+        <td>{{emp.lastName}}</td> 
+        <td>{{emp.salary}}</td>
+        <td><button><a [routerLink]="['view/',emp.id]">View</a></button> 
+            <button><a [routerLink]="['update/',emp.id]">Update</a> </button>
+            <button (click)="deleteemp(emp.id)">Delete</button>
+        </td>
+    </tr>
+</table>

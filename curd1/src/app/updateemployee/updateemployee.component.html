@@ -1,0 +1,15 @@
+<p>updateemployee works!</p>
+
+Id {{id}}
+
+<form (submit)="updateemployee()">
+
+    <!-- here we bind the class employee object(employee) to the field -->
+
+    First Name: <input type="text" name="firstName" [(ngModel)]="employee.firstName" ><br>  
+    Last Name: <input type="text" name="lastName" [(ngModel)]="employee.lastName" ><br>
+    Salary: <input type="number" name="salary" [(ngModel)]="employee.salary" ><br>
+
+    <button type="submit">Update</button>
+
+</form>

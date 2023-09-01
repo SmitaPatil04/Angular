@@ -1,0 +1,12 @@
+<p>formbyanil1 works!</p>
+
+<form #simpleForm="ngForm" ngModel (ngSubmit)="getdata(simpleForm.value)" >
+    
+    <input type="text"  ngModel name="username" placeholder="Enter name"><br><br>
+    <input type="password"  ngModel name="password" placeholder="Enter password"><br><br>
+    <input type="text"  ngModel name=" age" placeholder="Enter age"><br><br>
+    <input type="text"  ngModel name="address" placeholder="Enter address"><br><br>
+
+    <button>Submit</button>
+
+</form>

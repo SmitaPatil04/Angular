@@ -1,0 +1,50 @@
+
+    
+<div id="container1" class="bg-image" style=" background-image: url('../../../assets/images/child.jpg');
+background-repeat: no-repeat;background-size: cover;background-position: center center; background-attachment: fixed;background-color: rgba(255,255,255,0.13);
+ backdrop-filter: blur(10px)">
+<div id="container2" class="p-4" >
+ <div  class="main d-flex justify-content-center">
+
+
+    <div class="content justify-text-left ">
+        <div class="text-center text">Child Details </div>
+        <form [formGroup]="childDetailsform" (submit)="childD();" class="text-center m">
+            
+            Case Id : <br> <input type="text" name="caseid" formControlName="caseId" placeholder="Enter case id">
+      <p><small  *ngIf="!childDetailsform.controls['caseId'].valid && 
+        childDetailsform.controls['caseId']?.touched " style="color: red;">invalid case id </small></p>
+        
+        Individual's Name : <input type="text" name="indiname" formControlName="indname" placeholder="Individual's Name">
+        <p><small  *ngIf="!childDetailsform.controls['indname'].valid && 
+          childDetailsform.controls['indname']?.touched " style="color: red;"> Individual's Name </small></p>
+        
+          Child Name :  <input type="text" name="child" formControlName="childnm" placeholder="invalid  child Name ">
+          <p><small  *ngIf="!childDetailsform.controls['childnm'].valid && 
+            childDetailsform.controls['childnm']?.touched " style="color: red;">invalid  child Name</small></p>
+        
+            Child Gender : <br>
+            <input type="radio" value="male" name="gender" formControlName="gender">Male
+            <input type="radio" name="gender" value="female" formControlName="gender">FeMale
+            
+
+            <h4><small  *ngIf="!childDetailsform.controls['gender'].valid && 
+                childDetailsform.controls['gender']?.touched " style="color: red;">choose Child gender </small></h4>
+
+            Aadhar No : <input type="number" name="aadhar" formControlName="adharno" placeholder="Enter case id">
+            <p><small  *ngIf="!childDetailsform.controls['adharno'].valid && 
+              childDetailsform.controls['adharno']?.touched " style="color: red;">invalid Aadhar Number </small></p>
+            
+          
+           
+        
+        <div [innerHTML]="name" style="color: rgb(12, 78, 12);"></div>
+       
+        <button type="submit" class="btn btn-danger " [disabled]="childDetailsform.invalid">Add </button>
+        <button type="reset" class="btn btn-warning " (click)="resetform()">Reset</button>   
+    </form>
+ 
+    </div>
+</div>
+</div>
+</div>

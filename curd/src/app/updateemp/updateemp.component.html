@@ -1,0 +1,12 @@
+
+<h4 class="bg-info text-center">Update Employee</h4>
+
+<div class="container bg-dark border center text-white">
+<form  (submit)="updatee()">
+    id {{id}} <br>
+    Enter first name: <input type="text" name="firstName"[(ngModel)]="emp.firstName"  id=""><br>
+    Enter last name: <input type="text" name="lastName"[(ngModel)]="emp.lastName"  id=""><br>
+    Enter salary: <input type="number" name="salary"[(ngModel)]="emp.salary"  id=""><br>
+    <button class="btn-danger" type="submit">Update</button>
+</form>
+</div>

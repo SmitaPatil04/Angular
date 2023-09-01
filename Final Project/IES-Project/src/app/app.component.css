@@ -1,0 +1,21 @@
+*{
+    background-color: rgb(13, 14, 14);
+    margin: 0px;
+    padding: 0px;
+}
+#container1{
+position: relative;
+min-height: 100vh;
+} 
+
+ #container2{
+padding-bottom: 0px;
+} 
+
+#footer{
+position:absolute;
+bottom: 0px;
+width: 100%;
+color: rgba(14, 15, 15, 0.979);
+text-align: center;
+} 

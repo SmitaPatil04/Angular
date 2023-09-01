@@ -1,0 +1,21 @@
+<p>formpract works!</p>
+<h3>Basic form</h3>
+
+<div class="container">
+    <form #data="ngForm">
+    
+        <div class="row">
+            <div class="col-6">
+
+                Enter Your mail id <input type="text" name="mailid" [ngModel]><br>
+                                
+                Enter password <input type="password" name="pwd" [ngModel]><br>
+                
+            <button (click)="logindata(data)">Login</button>
+            </div>
+        </div>
+
+                
+     
+    </form>
+</div>

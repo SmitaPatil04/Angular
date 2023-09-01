@@ -1,0 +1,48 @@
+<div id="container1" class="bg-image" style=" background-image: url('../../../assets/images/income2.jpg');
+background-repeat: no-repeat;background-size: cover;background-position: center center; background-attachment: fixed;">
+    <div id="container2" >
+      <div class=" h-100">
+        <div class="row d-flex align-items-center justify-content-center h-100">
+         
+          <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+            <form [formGroup]="editplanform" (submit)="editplanD()">
+                <h2 class="fw-bold mb-3">Educational Details</h2>
+              
+              <div class="form-outline mb-4">
+                <input type="number" id="form1Example13" formControlName="plannm" class="form-control form-control-lg" />
+                <p><small  *ngIf="!editplanform.controls['plannm'].valid && 
+                  editplanform.controls['plannm']?.touched " style="color: red;">Plan Name</small></p>
+                <label class="form-label" for="form1Example13">Plan Name</label>
+              </div>
+              <div class="form-outline mb-4">
+                <input type="name" id="form1Example13" formControlName="plandesc" class="form-control form-control-lg" />
+                <p><small  *ngIf="!editplanform.controls['plandesc'].valid && 
+                  editplanform.controls['plandesc']?.touched " style="color: red;">Plan Description</small></p>
+                <label class="form-label" for="form1Example13">Plan Description</label>
+              </div>
+              <div class="form-outline mb-4">
+                <input type="date" id="form1Example13" formControlName="startdate" class="form-control form-control-lg" />
+                <p><small  *ngIf="!editplanform.controls['startdate'].valid && 
+                  editplanform.controls['startdate']?.touched " style="color: red;">Start Date</small></p>
+                <label class="form-label" for="form1Example13">Start Date</label>
+              </div>
+              <div class="form-outline mb-4">
+                <input type="date" id="form1Example13" formControlName="enddate" class="form-control form-control-lg" />
+                <p><small  *ngIf="!editplanform.controls['enddate'].valid && 
+                  editplanform.controls['enddate']?.touched " style="color: red;">End Date</small></p>
+                <label class="form-label" for="form1Example13">End date</label>
+              </div>
+                                
+                 
+                          
+              <button class="m-2 p-2" type="submit">Add</button>
+              <button type="reset" class="m-2 p-2" (click)="resetform()">Reset</button>
+                
+    
+            </form>
+          </div>
+        </div>
+      </div>
+</div>
+
+

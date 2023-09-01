@@ -1,0 +1,48 @@
+<div id="container1" class="bg-image" style=" background-image: url('../../../assets/images/income2.jpg');
+background-repeat: no-repeat;background-size: cover;background-position: center center; background-attachment: fixed;">
+    <div id="container2" >
+      <div class=" h-100">
+        <div class="row d-flex align-items-center justify-content-center h-100">
+         
+          <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+            <form [formGroup]="selectplanform" (submit)="createplanD()">
+                <h2 class="fw-bold mb-3">Educational Details</h2>
+              
+              <div class="form-outline mb-4">
+                <input type="number" id="form1Example13" formControlName="caseId" class="form-control form-control-lg" />
+                <p><small  *ngIf="!selectplanform.controls['caseId'].valid && 
+                  selectplanform.controls['caseId']?.touched " style="color: red;">Case Id</small></p>
+                <label class="form-label" for="form1Example13">Case Id</label>
+              </div>
+              <div class="form-outline mb-4">
+                <input type="name" id="form1Example13" formControlName="firstnm" class="form-control form-control-lg" />
+                <p><small  *ngIf="!selectplanform.controls['firstnm'].valid && 
+                  selectplanform.controls['firstnm']?.touched " style="color: red;">first Name</small></p>
+                <label class="form-label" for="form1Example13">first Name</label>
+              </div>
+              <div class="form-outline mb-4">
+                <input type="text" id="form1Example13" formControlName="lastnm" class="form-control form-control-lg" />
+                <p><small  *ngIf="!selectplanform.controls['lastnm'].valid && 
+                  selectplanform.controls['lastnm']?.touched " style="color: red;">Last name</small></p>
+                <label class="form-label" for="form1Example13">last name</label>
+              </div>
+              
+              <div class="form-outline mb-4">
+                <input type="text" id="form1Example13" formControlName="plan" class="form-control form-control-lg" />
+                <p><small  *ngIf="!selectplanform.controls['plan'].valid && 
+                  selectplanform.controls['plan']?.touched " style="color: red;">Plan</small></p>
+                <label class="form-label" for="form1Example13">Plan</label>
+              </div>
+                               
+                 
+                          
+              <button class="btn btn-primary btn-lg btn-block" type="submit">Submit</button>
+              <!-- <button type="reset" class="btn btn-warning " (click)="resetform()">Reset</button> -->
+                
+    
+            </form>
+          </div>
+        </div>
+      </div>
+</div>
+

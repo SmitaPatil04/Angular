@@ -1,0 +1,18 @@
+
+
+
+<h2 class="bg-secondary text-center">Employee Management Mini Project</h2>
+<h4 class="bg-secondary text-center">Add Employee</h4>
+
+<form class="bg-info" (submit)="create()">
+
+<!-- EnterID: <input type="number" [(ngModel)]="emp.id" id="id"> -->
+Enter your first name <input type="text" [(ngModel)]="emp.firstName" name="firstName"><br>
+
+Enter your last name  <input type="text"[(ngModel)]="emp.lastName" name="lastName"><br>
+
+Salary <input type="number" [(ngModel)]="emp.salary" name="salary"><br>
+
+<button class="btn-warning" type="submit">Submit</button>
+
+</form>

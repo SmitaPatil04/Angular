@@ -1,0 +1,137 @@
+
+
+<section class="vh-100 gradient-custom">
+    <div class="container-fluid py-5 h-60">
+      <div class="row justify-content-center align-items-center h-100 ">
+        <div class="col-12 col-lg-9 col-xl-7">
+          <div class="card shadow-2-strong card-registration bg-dark text-white" style="border-radius: 1rem;">
+            <div class="card-body pb-md-0 p-md-5">
+              <h4 class="mb-4 pb-2 pb-md-0 mb-md-5 text-uppercase text-center fw-bold">Registration Form</h4>
+              <form [formGroup]="signupform">
+  
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+  
+                    <div class="form-outline">
+                      <input type="text" id="firstName" class="form-control form-control-md" form-control-name="signup.fname "  />
+                      <label class="form-label" for="firstName">First Name</label>
+                    </div>
+  
+                  </div>
+                  <div class="col-md-6 mb-4">
+  
+                    <div class="form-outline">
+                      <input type="text" id="lastName" class="form-control form-control-md" form-control-name="signup.lname" />
+                      <label class="form-label" for="lastName">Last Name</label>
+                    </div>
+  
+                  </div>
+                </div>
+  
+                <div class="row">
+                  <div class="col-md-6 mb-4 d-flex align-items-center">
+  
+                    <div class="form-outline datepicker w-100">
+                      <input type="text" class="form-control form-control-md" id="birthdayDate" form-control-name="signup.dob" />
+                      <label for="birthdayDate" class="form-label">Birthday</label>
+                    </div>
+  
+                  </div>
+                  <div class="col-md-6 mb-4">
+  
+                    <h6 class="mb-2 pb-1">Gender: </h6>
+  
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="femaleGender"
+                        value="Female" checked form-control-name="signup.gender"  />
+                      <label class="form-check-label" for="femaleGender">Female</label>
+                    </div>
+  
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="maleGender"
+                        value="Male" form-control-name="signup.gender" />
+                      <label class="form-check-label" for="maleGender">Male</label>
+                    </div>
+  
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="otherGender"
+                        value="Other" form-control-name="signup.gender" />
+                      <label class="form-check-label" for="otherGender">Other</label>
+                    </div>
+  
+                  </div>
+                </div>
+  
+                <div class="row">
+                  <div class="col-md-6 mb-4 pb-1">
+  
+                    <div class="form-outline">
+                      <input type="email" id="emailAddress" class="form-control form-control-md" form-control-name="signup.email" />
+                      <label class="form-label" for="emailAddress">Email</label>
+                    </div>
+  
+                  </div>
+                  <div class="col-md-6 mb-4 pb-1">
+  
+                    <div class="form-outline">
+                      <input type="tel" id="phoneNumber" class="form-control form-control-md" form-control-name="signup.phno"/>
+                      <label class="form-label" for="phoneNumber">Phone Number</label>
+                    </div>
+  
+                  </div>
+                </div>
+  
+                <div class="row">
+                  <div class="col-12">
+                    <label class="form-label select-label">Country:</label>
+  
+                    <select (change)="getstatebycountryid($event.target.value)" class="select form-control-md form-outline" form-control-name="signup.countryId">
+                      <option value="0">-Country-</option>
+                      <option *ngFor="let country of countries|keyvalue" [value]="country.key">{{country.value}}</option>
+                      <!-- <option value="3">Subject 2</option>
+                      <option value="4">Subject 3</option> -->
+                    </select>
+                    
+                  </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <label class="form-label select-label">State</label>
+                      <select (change)="getcitybystateid($event.target.value)" class="select form-control-md form-outline" form-control-name="signup.stateId">
+                        <option value="0">-State-</option>
+                        <option *ngFor="let state of states |keyvalue" [value]="state.key">{{state.value}}</option>
+                        <!-- <option value="3">Subject 2</option>
+                        <option value="4">Subject 3</option> -->
+                      </select>
+                          
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-12">
+                      <label class="form-label select-label">City:</label>
+    
+                      <select class="select form-control-md form-outline" form-control-name="signup.cityId">
+                        <option value="0">-City-</option>
+                        <option *ngFor="let city of cities |keyvalue" [value]="city.key">{{city.value}}</option>
+                        <!-- <option value="3">Subject 2</option>
+                        <option value="4">Subject 3</option> -->
+                      </select>
+                      
+                    </div>
+                  </div>
+                <!-- <div class="mt-4 pt-2"> -->
+                  <div class="align-center">
+                  <input class="btn btn-primary btn-md btn-outline-light px-5" type="button" value="Reset" />
+                    
+                  <input class="btn btn-primary btn-md btn-outline-light px-5" type="button" value="Register" />
+                <!-- </div> -->
+                </div>
+  
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

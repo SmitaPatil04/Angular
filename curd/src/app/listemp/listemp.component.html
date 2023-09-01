@@ -1,0 +1,32 @@
+
+<h4 class="bg-success text-center">Mini Project</h4>
+<h5 class="class bg-primary text-center"> Employee Implimation</h5>
+
+<button class="btn-dark"><a [routerLink] ="['create']">Add Employee</a></button>
+
+
+<table class=" table table-striped table-bordered bg-info">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Salary</th>
+        <th>Actions</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let emp of emps">
+        <td>{{emp.id}}</td>
+        <td>{{emp.firstName}}</td>
+        <td>{{emp.lastName}}</td>
+        <td>{{emp.salary}}</td>
+        <td>
+            <button class="btn-warning"  type="button"><a [routerLink]="['update/',emp.id]">Update</a></button>
+            <button class="btn-danger" (click)="deleteemp(emp.id)">Delete</button>
+            <button class="btn-secondary" type="button"> <a [routerLink]="['view/',emp.id]">View</a></button>
+            
+        </td>
+    </tr>
+</tbody>
+    </table>

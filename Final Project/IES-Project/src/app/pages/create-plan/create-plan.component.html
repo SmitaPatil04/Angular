@@ -1,0 +1,48 @@
+<div id="container1" class="bg-image" style=" background-image: url('../../../assets/images/pain1.jpg');
+background-repeat: no-repeat;background-size: cover;background-position: center center; background-attachment: fixed;background-color: rgba(255,255,255,0.13);
+ ">
+<div id="container2" class="p-4" >
+ <div  class="main d-flex justify-content-center">
+
+    <div class="content justify-text-left ">
+        <div class="text-center display-6 ">Educational Details</div> <br>
+            <form [formGroup]="createplanform" (submit)="createplanD()">
+                
+              
+              <div class="form-outline mb-4">
+                <input type="number" id="form1Example13" formControlName="plannm" class="form-control form-control-lg" placeholder="Plan name" />
+                <p><small  *ngIf="!createplanform.controls['plannm'].valid && 
+                  createplanform.controls['plannm']?.touched " style="color: red;">Plan Name</small></p>
+               
+              </div>
+              <div class="form-outline mb-4">
+                <input type="name" id="form1Example13" formControlName="plandesc" class="form-control form-control-lg" placeholder="Plan Description" />
+                <p><small  *ngIf="!createplanform.controls['plandesc'].valid && 
+                  createplanform.controls['plandesc']?.touched " style="color: red;">Plan Description</small></p>
+                
+              </div>
+              <div class="form-outline mb-4">
+                <input type="date" id="form1Example13" formControlName="startdate" class="form-control form-control-lg" placeholder="Start Date"/>
+                <p><small  *ngIf="!createplanform.controls['startdate'].valid && 
+                  createplanform.controls['startdate']?.touched " style="color: red;">Start Date</small></p>
+                
+              </div>
+              <div class="form-outline mb-4">
+                <input type="date" id="form1Example13" formControlName="enddate" class="form-control form-control-lg" placeholder="End Date"/>
+                <p><small  *ngIf="!createplanform.controls['enddate'].valid && 
+                  createplanform.controls['enddate']?.touched " style="color: red;">End Date</small></p>
+               
+              </div>
+                                
+                 
+                          
+              <button class="btn  btn-lg" type="submit">Add</button>
+              <button type="reset" class="btn " (click)="resetform()">Reset</button>
+                
+    
+            </form>
+          </div>
+        </div>
+      </div>
+</div>
+

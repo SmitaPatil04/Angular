@@ -1,0 +1,60 @@
+<p>directives works!</p>
+<!-- <div *ngIf="salary<50000; else check">
+    you are developer
+</div>
+<ng-template #check>
+    <h2>You are worker</h2>
+</ng-template> -->
+
+
+<!-- <div *ngIf="age<=18;else Vote">
+    Yo are eligible for Vote
+</div>
+<ng-template #Vote>
+    <h2>Yu are not eligible for vote</h2>
+</ng-template> -->
+
+ <!-- if else -->
+
+<!-- <div *ngIf="n%2==0; else odd">
+    number is even
+</div>
+
+<ng-template #odd>
+   <h2> number is odd</h2>
+</ng-template> -->
+
+<!-- for loop -->
+
+<!-- <div *ngFor="let day of days">
+{{day}}
+</div>  -->
+
+<!-- <div *ngFor="let year of leapyr">
+{{year}}
+</div>-->
+
+
+
+<!-- Switch case -->
+
+<div [ngSwitch]="choice">
+    <div *ngSwitchCase="1">English</div>
+    <div *ngSwitchCase="2">Hindi</div>
+    <div *ngSwitchCase="3">Marathi</div>
+    <div *ngSwitchCase="4">Kanada</div>
+    <div *ngDefault>Invalid Choice</div>
+</div>
+
+<!-- <div [ngSwitch]="choice">
+    <div *ngSwitchCase="1">
+        <h1 *ngIf="bill=3000 ;then first else next"></h1>
+        <ng-template #first>
+            <h4>You get Discount 5%</h4>
+        </ng-template>
+        <ng-template #next>
+            <h1 *ngIf="">First Class</h1>
+        </ng-template>
+
+</div>
+</div> -->
