@@ -1,0 +1,32 @@
+
+ 
+ <form id="chart-form">
+        <label for="monthly-revenue">Select Monthly Revenue:</label>
+        <input type="text" id="monthly-revenue" placeholder="Enter revenue">
+        <br>
+
+        <label for="color">Select Color:</label>
+        <select id="color">
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="purple">Purple</option>
+            <option value="yellow">Yellow</option>
+            <option value="blue">Blue</option>
+            <option value="grey">Grey</option>
+            <option value="orange">Orange</option>
+        </select>
+        <br>
+        <label for="chart-type">Select Chart Type:</label>
+        <select id="chart-type">
+            <option value="bar">Bar</option>
+            <option value="pie">Pie</option>
+            <option value="line">Line</option>
+        </select>
+
+        <button type="button" onclick="generateChart()">Generate Chart</button>
+    </form>
+    
+    <div id="chart-container" style="width: 600px; height: 400px;"></div>
+
+
+    
